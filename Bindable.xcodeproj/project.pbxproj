@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71877592266F85BA00655DB2 /* draggingUp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71877590266F85BA00655DB2 /* draggingUp.jpg */; };
+		71877593266F85BA00655DB2 /* draggingDown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71877591266F85BA00655DB2 /* draggingDown.jpg */; };
 		719FB2EC266E231600BAF213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB2EB266E231600BAF213 /* AppDelegate.swift */; };
 		719FB2EE266E231600BAF213 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB2ED266E231600BAF213 /* SceneDelegate.swift */; };
 		719FB2F0266E231600BAF213 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB2EF266E231600BAF213 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71877590266F85BA00655DB2 /* draggingUp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draggingUp.jpg; sourceTree = "<group>"; };
+		71877591266F85BA00655DB2 /* draggingDown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draggingDown.jpg; sourceTree = "<group>"; };
 		719FB2E8266E231600BAF213 /* Bindable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bindable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719FB2EB266E231600BAF213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		719FB2ED266E231600BAF213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		719FB2EA266E231600BAF213 /* Bindable */ = {
 			isa = PBXGroup;
 			children = (
+				71877590266F85BA00655DB2 /* draggingUp.jpg */,
+				71877591266F85BA00655DB2 /* draggingDown.jpg */,
 				719FB306266E23F400BAF213 /* Classes */,
 				719FB2EB266E231600BAF213 /* AppDelegate.swift */,
 				719FB2ED266E231600BAF213 /* SceneDelegate.swift */,
@@ -215,7 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71877592266F85BA00655DB2 /* draggingUp.jpg in Resources */,
 				719FB2F8266E231700BAF213 /* LaunchScreen.storyboard in Resources */,
+				71877593266F85BA00655DB2 /* draggingDown.jpg in Resources */,
 				719FB2F5266E231700BAF213 /* Assets.xcassets in Resources */,
 				719FB2F3266E231600BAF213 /* Main.storyboard in Resources */,
 			);
