@@ -20,8 +20,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        workingModels = Worker.Manager.workingModels
-        tableView.reloadData()
+        workingModels = Worker.Boss.workingModels
     }
     
     @IBAction func jump(_ sender: Any) {
@@ -34,6 +33,7 @@ class ViewController: UIViewController {
     var workingModels = [Worker.Model]() {
         didSet {
             titleLabel.text = workingModels.count == 0 ? "现在没人打工" : "现在有\(workingModels.count)个打工人"
+            tableView.reloadData()
         }
     }
 }
@@ -51,14 +51,13 @@ extension ViewController: UITableViewDataSource {
         
         cell.workDone = { [weak self] _ in
             guard let self = self else { return }
-            self.workingModels = Worker.Manager.workingModels
-            self.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+            self.workingModels = Worker.Boss.workingModels
         }
         return cell
     }
 }
 
-class MainCell: WorkerCell {
+class MainCell: CommonCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
@@ -96,7 +95,7 @@ class MainCell: WorkerCell {
     
     @IBAction func stopWork() {
         guard let model = bindModel else { return }
-        Worker.Manager.stop(model)
+        Worker.Boss.stop(model)
     }
     
     var workDone: ((Worker.Model?) -> ())?

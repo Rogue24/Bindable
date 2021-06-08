@@ -22,7 +22,7 @@ extension Worker {
 
             for i in 0 ..< testCount {
                 let model: Model
-                if let m = Manager.findModel(for: i) {
+                if let m = Boss.findModel(for: i) {
                     model = m
                 } else {
                     model = Model("打工人\(i + 1)号", i)
@@ -46,8 +46,9 @@ extension Worker {
 
         override func viewDidDisappear(_ animated: Bool) {
             super.viewDidAppear(animated)
+            
             guard navigationController == nil else { return }
-            Manager.filterWithoutWorking()
+            Boss.filterWithoutWorking()
         }
         
         deinit {
@@ -75,6 +76,6 @@ extension Worker.ListVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = models[indexPath.row]
-        Worker.Manager.addWorkQueue(model)
+        Worker.Boss.addWorkQueue(model)
     }
 }

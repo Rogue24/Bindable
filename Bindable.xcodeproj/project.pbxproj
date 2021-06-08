@@ -26,8 +26,10 @@
 		719FB323266E244900BAF213 /* UIWindow.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB322266E244900BAF213 /* UIWindow.Extension.swift */; };
 		719FB326266E246500BAF213 /* UIScreen.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB325266E246500BAF213 /* UIScreen.Extension.swift */; };
 		719FB329266E24C000BAF213 /* UIView.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB328266E24C000BAF213 /* UIView.Extension.swift */; };
-		719FB32D266E262900BAF213 /* Worker.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB32C266E262900BAF213 /* Worker.Manager.swift */; };
-		719FB332266E26D100BAF213 /* Worker.Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB331266E26D100BAF213 /* Worker.Bindable.swift */; };
+		719FB32D266E262900BAF213 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB32C266E262900BAF213 /* Worker.swift */; };
+		719FB332266E26D100BAF213 /* Worker.V&M.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB331266E26D100BAF213 /* Worker.V&M.swift */; };
+		71ADB683266F637A00E3178F /* Worker.Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADB682266F637A00E3178F /* Worker.Boss.swift */; };
+		71ADB688266F649200E3178F /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADB687266F649200E3178F /* CommonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +54,10 @@
 		719FB322266E244900BAF213 /* UIWindow.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.Extension.swift; sourceTree = "<group>"; };
 		719FB325266E246500BAF213 /* UIScreen.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.Extension.swift; sourceTree = "<group>"; };
 		719FB328266E24C000BAF213 /* UIView.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.Extension.swift; sourceTree = "<group>"; };
-		719FB32C266E262900BAF213 /* Worker.Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.Manager.swift; sourceTree = "<group>"; };
-		719FB331266E26D100BAF213 /* Worker.Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.Bindable.swift; sourceTree = "<group>"; };
+		719FB32C266E262900BAF213 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		719FB331266E26D100BAF213 /* Worker.V&M.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Worker.V&M.swift"; sourceTree = "<group>"; };
+		71ADB682266F637A00E3178F /* Worker.Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.Boss.swift; sourceTree = "<group>"; };
+		71ADB687266F649200E3178F /* CommonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +117,11 @@
 		719FB307266E23F400BAF213 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				71ADB687266F649200E3178F /* CommonCell.swift */,
+				719FB32C266E262900BAF213 /* Worker.swift */,
+				71ADB682266F637A00E3178F /* Worker.Boss.swift */,
+				719FB331266E26D100BAF213 /* Worker.V&M.swift */,
 				719FB308266E23F400BAF213 /* Worker.ListVC.swift */,
-				719FB331266E26D100BAF213 /* Worker.Bindable.swift */,
-				719FB32C266E262900BAF213 /* Worker.Manager.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -222,16 +228,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				719FB32D266E262900BAF213 /* Worker.Manager.swift in Sources */,
+				719FB32D266E262900BAF213 /* Worker.swift in Sources */,
 				719FB31C266E23F400BAF213 /* Bindable.swift in Sources */,
+				71ADB688266F649200E3178F /* CommonCell.swift in Sources */,
 				719FB31A266E23F400BAF213 /* JP.swift in Sources */,
+				71ADB683266F637A00E3178F /* Worker.Boss.swift in Sources */,
 				719FB318266E23F400BAF213 /* ScreenFit.Extension.swift in Sources */,
 				719FB326266E246500BAF213 /* UIScreen.Extension.swift in Sources */,
 				719FB2F0266E231600BAF213 /* ViewController.swift in Sources */,
 				719FB329266E24C000BAF213 /* UIView.Extension.swift in Sources */,
 				719FB323266E244900BAF213 /* UIWindow.Extension.swift in Sources */,
 				719FB31B266E23F400BAF213 /* ListViewReusable.swift in Sources */,
-				719FB332266E26D100BAF213 /* Worker.Bindable.swift in Sources */,
+				719FB332266E26D100BAF213 /* Worker.V&M.swift in Sources */,
 				719FB2EC266E231600BAF213 /* AppDelegate.swift in Sources */,
 				719FB317266E23F400BAF213 /* Literal.Extension.swift in Sources */,
 				719FB316266E23F400BAF213 /* UIViewController.Extension.swift in Sources */,

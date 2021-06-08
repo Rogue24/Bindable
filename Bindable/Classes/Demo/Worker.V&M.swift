@@ -10,41 +10,9 @@ import UIKit
 var cellCount = 0
 var modelCount = 0
 
-class WorkerCell: UITableViewCell, VBindable {
-    var bindModel: Worker.Model? = nil
-    func updateState() {}
-}
-
+// MARK:- VBindable
 extension Worker {
-    class Model: NSObject, MBindable {
-        let name: String
-        
-        // MBindable
-        let identifier: Int
-        weak var bindView: WorkerCell? = nil
-        
-        var state: State = .idle {
-            didSet {
-                bindView?.updateState()
-            }
-        }
-
-        init(_ name: String, _ identifier: Int) {
-            self.name = name
-            self.identifier = identifier
-
-            modelCount += 1
-        }
-
-        deinit {
-            modelCount -= 1
-            JPrint("Model 卒，剩", modelCount)
-        }
-    }
-}
-
-extension Worker {
-    class Cell: WorkerCell, CellReusable {
+    class Cell: CommonCell, CellReusable {
         static let rowHeight: CGFloat = 80.px
         
         // CellReusable
@@ -118,7 +86,7 @@ extension Worker {
         
         @objc func strike() {
             guard let model = bindModel else { return }
-            Manager.stop(model)
+            Boss.stop(model)
         }
 
         required init?(coder: NSCoder) {
@@ -132,4 +100,31 @@ extension Worker {
     }
 }
 
+// MARK:- MBindable
+extension Worker {
+    class Model: NSObject, MBindable {
+        let name: String
+        
+        // MBindable
+        let identifier: Int
+        weak var bindView: CommonCell? = nil
+        
+        var state: State = .idle {
+            didSet {
+                bindView?.updateState()
+            }
+        }
 
+        init(_ name: String, _ identifier: Int) {
+            self.name = name
+            self.identifier = identifier
+
+            modelCount += 1
+        }
+
+        deinit {
+            modelCount -= 1
+            JPrint("Model 卒，剩", modelCount)
+        }
+    }
+}
