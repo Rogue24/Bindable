@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Bindable
+//  MVBindable
 //
 //  Created by aa on 2021/6/7.
 //
@@ -12,6 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    private var _workingModels = [Worker.Model]()
+    var workingModels: [Worker.Model] {
+        set {
+            _workingModels = newValue.sorted { $0.identifier < $1.identifier }
+            titleLabel.text = _workingModels.count == 0 ? "现在没人打工" : "现在有\(workingModels.count)个打工人"
+            tableView.reloadData()
+        }
+        get { _workingModels }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemIndigo
@@ -21,6 +31,16 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         workingModels = Worker.Boss.workingModels
+        
+        Worker.Boss.startWorkCallback = { [weak self] in
+            guard let self = self else { return }
+            self.workingModels = Worker.Boss.workingModels
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Worker.Boss.startWorkCallback = nil
     }
     
     @IBAction func jump(_ sender: Any) {
@@ -28,13 +48,6 @@ class ViewController: UIViewController {
             return
         }
         navCtr.pushViewController(Worker.ListVC(), animated: true)
-    }
-    
-    var workingModels = [Worker.Model]() {
-        didSet {
-            titleLabel.text = workingModels.count == 0 ? "现在没人打工" : "现在有\(workingModels.count)个打工人"
-            tableView.reloadData()
-        }
     }
 }
 
@@ -49,10 +62,6 @@ extension ViewController: UITableViewDataSource {
         
         cell ~~~ model
         
-        cell.workDone = { [weak self] _ in
-            guard let self = self else { return }
-            self.workingModels = Worker.Boss.workingModels
-        }
         return cell
     }
 }
@@ -86,10 +95,8 @@ class MainCell: CommonCell {
             progressView.progress = 0
         case let .working(progress):
             progressView.progress = Float(progress)
-        case .idle:
-            fallthrough
-        case .done:
-            workDone?(bindModel)
+        default:
+            break
         }
     }
     
@@ -97,6 +104,4 @@ class MainCell: CommonCell {
         guard let model = bindModel else { return }
         Worker.Boss.stop(model)
     }
-    
-    var workDone: ((Worker.Model?) -> ())?
 }

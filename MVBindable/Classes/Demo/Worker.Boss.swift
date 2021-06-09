@@ -1,6 +1,6 @@
 //
 //  Worker.Boss.swift
-//  Bindable
+//  MVBindable
 //
 //  Created by aa on 2021/6/8.
 //
@@ -14,6 +14,7 @@ extension Worker {
         static let maxWorkingCount = 3
         private(set) static var workQueue: [Model] = []
         private static var loopTimer: Timer? = nil
+        static var startWorkCallback: (() -> ())?
 
         // MARK: 计算属性
         static var workingCount: Int {
@@ -114,6 +115,8 @@ private extension Worker.Boss {
         } else {
             removeTimer()
         }
+        
+        startWorkCallback?()
     }
 
     // MARK: 开始计时

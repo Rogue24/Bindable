@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1A3A282670F2DE001A2921 /* NotificationCenter.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A3A272670F2DD001A2921 /* NotificationCenter.Extension.swift */; };
 		71877592266F85BA00655DB2 /* draggingUp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71877590266F85BA00655DB2 /* draggingUp.jpg */; };
 		71877593266F85BA00655DB2 /* draggingDown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71877591266F85BA00655DB2 /* draggingDown.jpg */; };
 		719FB2EC266E231600BAF213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB2EB266E231600BAF213 /* AppDelegate.swift */; };
@@ -22,7 +23,7 @@
 		719FB319266E23F400BAF213 /* UIScrollView.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB30D266E23F400BAF213 /* UIScrollView.Extension.swift */; };
 		719FB31A266E23F400BAF213 /* JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB30F266E23F400BAF213 /* JP.swift */; };
 		719FB31B266E23F400BAF213 /* ListViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB310266E23F400BAF213 /* ListViewReusable.swift */; };
-		719FB31C266E23F400BAF213 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB311266E23F400BAF213 /* Bindable.swift */; };
+		719FB31C266E23F400BAF213 /* MVBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB311266E23F400BAF213 /* MVBindable.swift */; };
 		719FB31D266E23F400BAF213 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB313266E23F400BAF213 /* Const.swift */; };
 		719FB31E266E23F400BAF213 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB314266E23F400BAF213 /* Function.swift */; };
 		719FB323266E244900BAF213 /* UIWindow.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719FB322266E244900BAF213 /* UIWindow.Extension.swift */; };
@@ -35,9 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1A3A272670F2DD001A2921 /* NotificationCenter.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.Extension.swift; sourceTree = "<group>"; };
 		71877590266F85BA00655DB2 /* draggingUp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draggingUp.jpg; sourceTree = "<group>"; };
 		71877591266F85BA00655DB2 /* draggingDown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draggingDown.jpg; sourceTree = "<group>"; };
-		719FB2E8266E231600BAF213 /* Bindable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bindable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		719FB2E8266E231600BAF213 /* MVBindable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVBindable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719FB2EB266E231600BAF213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		719FB2ED266E231600BAF213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		719FB2EF266E231600BAF213 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		719FB30D266E23F400BAF213 /* UIScrollView.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.Extension.swift; sourceTree = "<group>"; };
 		719FB30F266E23F400BAF213 /* JP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JP.swift; sourceTree = "<group>"; };
 		719FB310266E23F400BAF213 /* ListViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewReusable.swift; sourceTree = "<group>"; };
-		719FB311266E23F400BAF213 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		719FB311266E23F400BAF213 /* MVBindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVBindable.swift; sourceTree = "<group>"; };
 		719FB313266E23F400BAF213 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		719FB314266E23F400BAF213 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		719FB322266E244900BAF213 /* UIWindow.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.Extension.swift; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		719FB2DF266E231500BAF213 = {
 			isa = PBXGroup;
 			children = (
-				719FB2EA266E231600BAF213 /* Bindable */,
+				719FB2EA266E231600BAF213 /* MVBindable */,
 				719FB2E9266E231600BAF213 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,12 +88,12 @@
 		719FB2E9266E231600BAF213 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				719FB2E8266E231600BAF213 /* Bindable.app */,
+				719FB2E8266E231600BAF213 /* MVBindable.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		719FB2EA266E231600BAF213 /* Bindable */ = {
+		719FB2EA266E231600BAF213 /* MVBindable */ = {
 			isa = PBXGroup;
 			children = (
 				71877590266F85BA00655DB2 /* draggingUp.jpg */,
@@ -105,13 +107,13 @@
 				719FB2F6266E231700BAF213 /* LaunchScreen.storyboard */,
 				719FB2F9266E231700BAF213 /* Info.plist */,
 			);
-			path = Bindable;
+			path = MVBindable;
 			sourceTree = "<group>";
 		};
 		719FB306266E23F400BAF213 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				719FB311266E23F400BAF213 /* Bindable.swift */,
+				719FB311266E23F400BAF213 /* MVBindable.swift */,
 				719FB307266E23F400BAF213 /* Demo */,
 				719FB312266E23F400BAF213 /* Const */,
 				719FB309266E23F400BAF213 /* Extension */,
@@ -125,9 +127,9 @@
 			children = (
 				71ADB687266F649200E3178F /* CommonCell.swift */,
 				719FB32C266E262900BAF213 /* Worker.swift */,
-				71ADB682266F637A00E3178F /* Worker.Boss.swift */,
 				719FB331266E26D100BAF213 /* Worker.V&M.swift */,
 				719FB308266E23F400BAF213 /* Worker.ListVC.swift */,
+				71ADB682266F637A00E3178F /* Worker.Boss.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 				719FB328266E24C000BAF213 /* UIView.Extension.swift */,
 				719FB30A266E23F400BAF213 /* UIViewController.Extension.swift */,
 				719FB322266E244900BAF213 /* UIWindow.Extension.swift */,
+				1A1A3A272670F2DD001A2921 /* NotificationCenter.Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -167,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		719FB2E7266E231600BAF213 /* Bindable */ = {
+		719FB2E7266E231600BAF213 /* MVBindable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 719FB2FC266E231700BAF213 /* Build configuration list for PBXNativeTarget "Bindable" */;
+			buildConfigurationList = 719FB2FC266E231700BAF213 /* Build configuration list for PBXNativeTarget "MVBindable" */;
 			buildPhases = (
 				719FB2E4266E231600BAF213 /* Sources */,
 				719FB2E5266E231600BAF213 /* Frameworks */,
@@ -179,9 +182,9 @@
 			);
 			dependencies = (
 			);
-			name = Bindable;
+			name = MVBindable;
 			productName = Bindable;
-			productReference = 719FB2E8266E231600BAF213 /* Bindable.app */;
+			productReference = 719FB2E8266E231600BAF213 /* MVBindable.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 719FB2E3266E231500BAF213 /* Build configuration list for PBXProject "Bindable" */;
+			buildConfigurationList = 719FB2E3266E231500BAF213 /* Build configuration list for PBXProject "MVBindable" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -211,7 +214,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				719FB2E7266E231600BAF213 /* Bindable */,
+				719FB2E7266E231600BAF213 /* MVBindable */,
 			);
 		};
 /* End PBXProject section */
@@ -237,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				719FB32D266E262900BAF213 /* Worker.swift in Sources */,
-				719FB31C266E23F400BAF213 /* Bindable.swift in Sources */,
+				719FB31C266E23F400BAF213 /* MVBindable.swift in Sources */,
 				71ADB688266F649200E3178F /* CommonCell.swift in Sources */,
 				719FB31A266E23F400BAF213 /* JP.swift in Sources */,
 				71ADB683266F637A00E3178F /* Worker.Boss.swift in Sources */,
@@ -248,6 +251,7 @@
 				719FB323266E244900BAF213 /* UIWindow.Extension.swift in Sources */,
 				719FB31B266E23F400BAF213 /* ListViewReusable.swift in Sources */,
 				719FB332266E26D100BAF213 /* Worker.V&M.swift in Sources */,
+				1A1A3A282670F2DE001A2921 /* NotificationCenter.Extension.swift in Sources */,
 				719FB2EC266E231600BAF213 /* AppDelegate.swift in Sources */,
 				719FB317266E23F400BAF213 /* Literal.Extension.swift in Sources */,
 				719FB316266E23F400BAF213 /* UIViewController.Extension.swift in Sources */,
@@ -404,12 +408,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
-				INFOPLIST_FILE = Bindable/Info.plist;
+				INFOPLIST_FILE = MVBindable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhoujianping.Bindable;
+				PRODUCT_BUNDLE_IDENTIFIER = zhoujianping.MVBindable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,12 +427,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
-				INFOPLIST_FILE = Bindable/Info.plist;
+				INFOPLIST_FILE = MVBindable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhoujianping.Bindable;
+				PRODUCT_BUNDLE_IDENTIFIER = zhoujianping.MVBindable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		719FB2E3266E231500BAF213 /* Build configuration list for PBXProject "Bindable" */ = {
+		719FB2E3266E231500BAF213 /* Build configuration list for PBXProject "MVBindable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				719FB2FA266E231700BAF213 /* Debug */,
@@ -447,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		719FB2FC266E231700BAF213 /* Build configuration list for PBXNativeTarget "Bindable" */ = {
+		719FB2FC266E231700BAF213 /* Build configuration list for PBXNativeTarget "MVBindable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				719FB2FD266E231700BAF213 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Bindable
+//  MVBindable
 //
 //  Created by aa on 2021/6/7.
 //

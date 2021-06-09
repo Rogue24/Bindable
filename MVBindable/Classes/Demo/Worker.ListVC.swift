@@ -1,5 +1,5 @@
 //
-//  BindableVC.swift
+//  MVBindableVC.swift
 //  Neves
 //
 //  Created by aa on 2021/3/25.
@@ -21,12 +21,7 @@ extension Worker {
             modelCount = 0
 
             for i in 0 ..< testCount {
-                let model: Model
-                if let m = Boss.findModel(for: i) {
-                    model = m
-                } else {
-                    model = Model("打工人\(i + 1)号", i)
-                }
+                let model = Boss.findModel(for: i) ?? Model("打工人\(i + 1)号", i)
                 models.append(model)
             }
 
@@ -44,12 +39,12 @@ extension Worker {
             tableView.reloadData()
         }
 
-        override func viewDidDisappear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            
-            guard navigationController == nil else { return }
-            Boss.filterWithoutWorking()
-        }
+//        override func viewDidDisappear(_ animated: Bool) {
+//            super.viewDidAppear(animated)
+//            
+//            guard navigationController == nil else { return }
+//            Boss.filterWithoutWorking()
+//        }
         
         deinit {
             JPrint("ListVC 卒")
